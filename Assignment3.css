@@ -1,0 +1,134 @@
+
+
+
+.container{
+    display: grid;
+
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows:0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas:
+    "sidebar title title title"
+    "sidebar about about about"
+    "sidebar education education education"
+    "sidebar experience experience experience"
+    "sidebar achivements achivements achivements";
+    grid-gap:0.5rem;
+
+    
+    font-weight: 800;
+    
+    color: #140909;
+}
+
+.skills{
+    padding: 2rem;
+}
+#sidebar{
+    background: #4c81ae;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+
+}
+
+#title{
+    background: #f5f6f8;
+    grid-area: title;
+    text-align: center;
+    border-radius: var(--main-radius);
+/*     border: black var(--main-radius) solid; */ 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    font-size: 3rem;
+}
+.about{
+    background-color: #f9f6f6;
+    grid-area: about;
+
+    border-radius: var(--main-radius);
+/*     border: black var(--main-radius) solid; */  
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+.abouttitle{
+    background-color: #999;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-family: 'Times roman';
+    font-size: 18px;
+    letter-spacing: 6px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.aboutcontent{
+    background: #eaeaef;
+    grid-area: about;
+    border-radius: var(--main-radius);
+/*     border: black var(--main-radius) solid; */ 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+
+
+    
+
+}
+
+#education{
+    background:#f8f8fa;
+    grid-area: education;
+
+    border-radius: var(--main-radius);
+/*     border: black var(--main-radius) solid; */ 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+
+}
+
+#experience{
+    background: #fafafa;
+    grid-area: experience;
+
+    border-radius: var(--main-radius);
+/*     border: black var(--main-radius) solid; */ 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+
+}
+
+#achivements{
+    background: #fafafb;
+    grid-area: achivements;
+
+    border-radius: var(--main-radius);
+/*     border: black var(--main-radius) solid; */ 
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+footer{
+    padding-top: 15rem;
+}
+
+@media only screen and (max-width: 500px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr
+                    1.2fr 1.2fr 1.2fr 1.2fr;
+
+        grid-template-areas:
+        "sidebar"
+        "title"
+        "about"
+        "education"
+        "experience"
+        "achivements"
+        ;
+
+        row-gap: 0.5rem ;
+    }
+    #sidebar{
+        display: none;
+    }
+}
+
